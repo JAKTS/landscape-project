@@ -2,12 +2,30 @@
 <html ng-app="davisLandscaping">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Davis Landscaping</title>
+    <link rel="stylesheet" src="/assests/styles/employeeStyle.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" src="/assests/styles/homeStyle.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" src="/assests/styles/inventoryStyle.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" src="/assests/styles/jobsStyle.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" src="/assests/styles/jobStyle.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" src="/assests/styles/taskStyle.css" media="screen" title="no title" charset="utf-8">
+
   </head>
   <body>
-
+    <ui-view></ui-view>
   </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
-<script type="text/javascript" src='js/app.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.2.6/ui-grid.js"></script>
+<script type="text/javascript" src='/app/app.js'></script>
+<script type="text/javascript" src='/app/routes.js'></script>
+<script type="text/javascript" src='/app/component/home/homeCtrl.js'></script>
+<script type="text/javascript" src='/app/component/home/homeSrv.js'></script>
+<script type="text/javascript" src='/app/component/jobs/jobsCtrl.js'></script>
+<script type="text/javascript" src='/app/component/jobs/jobsSrv.js'></script>
+<script type="text/javascript" src='/app/component/jobs/job/jobCtrl.js'></script>
+<script type="text/javascript" src='/app/component/jobs/job/jobSrv.js'></script>
+<script type="text/javascript" src='/app/component/jobs/job/task/taskCtrl.js'></script>
+<script type="text/javascript" src='/app/component/jobs/job/task/taskSrv.js'></script>
+
 </html>
