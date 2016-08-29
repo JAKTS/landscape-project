@@ -16,13 +16,6 @@ angular.module('davisLandscaping')
         css: '/app/asssets/styles/inventoryStyle.css'  //can add multiple css sheets but has to be in array format
       }
     })
-    .state('employee',{
-      url:'/employee',
-      templateUrl:'/app/component/employee/employeeView.html',
-      data: {
-        css:'/app/asssets/styles/employeeStyle.css'
-      }
-    })
     .state('jobs', {
       url:'/jobs',
       templateUrl:"/app/component/jobs/jobsView.html",
@@ -45,6 +38,22 @@ angular.module('davisLandscaping')
       controller:'taskCtrl',
       data: {
         css:'/app/asssets/styles/taskStyle.css'
+      }
+    })
+    .state('client', {
+      url:'/client',
+      templateUrl:"/app/component/jobs/client/clientView.html",
+      controller:'clientCtrl',
+      data: {
+        css:'/app/asssets/styles/taskStyle.css'
+      }
+    })
+    .state('employee', {
+      url:'/employee',
+      templateUrl:"/app/component/employee/employeeView.html",
+      controller:'userCtrl',
+      data: {
+        css:'/app/asssets/styles/userStyle.css'
       }
     });
     $urlRouterProvider.otherwise('/');

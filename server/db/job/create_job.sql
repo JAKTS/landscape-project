@@ -1,4 +1,4 @@
 insert into job
-  (name, due_date, user, description, priority)
+  (jobname, jobduedate, jobdescription, jobpriority)
 values
   ($1, $2, $3, $4, $5);
