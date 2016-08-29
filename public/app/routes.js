@@ -51,7 +51,7 @@ angular.module('davisLandscaping')
     .state('employee', {
       url:'/employee',
       templateUrl:"/app/component/employee/employeeView.html",
-      controller:'userCtrl',
+      controller:'employeeCtrl',
       data: {
         css:'/app/asssets/styles/userStyle.css'
       }

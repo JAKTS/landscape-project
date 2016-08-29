@@ -5,6 +5,8 @@ create table job(
   JobDescription varchar(255),
   JobPriority varchar(10),
   JobImportantNotes varchar(150)
+  TaskID int --foreign key
+  ClientID int --foreign key
 );
 
 create table task(
@@ -13,7 +15,9 @@ create table task(
   TaskDueDate varchar(8),
   TaskDescription varchar(255),
   TaskPriority varchar(10),
+  TaskTime decimal(5,2),
   TaskImportantNotes varchar(150)
+  ClientID int --foreign key
 );
 
 create table client(
@@ -25,6 +29,8 @@ create table client(
   ClientCity varchar(30),
   ClientZipCode varchar(7),
   ClientNotes varchar(255)
+  TaskID int --foreign key
+  JobID int --foreign key
 );
 
 create table user(

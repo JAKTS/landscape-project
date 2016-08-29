@@ -31,32 +31,32 @@ var userCtrl = require('./controllers/userCtrlDB.js');
 
 //Jobs Endpoints
 app.get('/jobs', jobCtrl.getAllJobs);
-app.post('/jobs', jobCtrl.createJob);
+app.post('/jobs', jobCtrl.createJob); //also on Job Endpoint
+app.get('/job/:jobname', jobCtrl.getJob); //also on Job Endpoint
 //app.put('/jobs/id', jobCtrl.updateJob)
 
 // Job Endpoints
-app.get('/job/:name', jobCtrl.getJob);
-app.delete('/job/:id', jobCtrl.deleteJob);
+app.delete('/job/:jobid', jobCtrl.deleteJob); //also on Jobs Endpoint
 app.get('/job', taskCtrl.getAllTasks);
+app.post('/task', taskCtrl.createTask); //also on Task Endpoint
 
 
 
 // Task Endpoints
-app.delete('/task/:id', taskCtrl.deleteTask);
-app.get('/task/:name', taskCtrl.getTask);
-app.post('/task', taskCtrl.createTask);
+app.delete('/task/:taskid', taskCtrl.deleteTask); //also on Job Endpoint
+app.get('/task/:taskname', taskCtrl.getTask); //also on Job Endpoint
 // app.put('/task/:id', taskCtrl.updateTask);
 
 // Client Endpoints
-app.get('/client/:name', clientCtrl.getClient);
-app.delete('/client/:id', clientCtrl.deleteClient);
+app.get('/client/:clientlastname', clientCtrl.getClient);
+app.delete('/client/:clientid', clientCtrl.deleteClient);
 app.post('/client', clientCtrl.createClient);
 //app.put('/client/:id', clientCtrl.updateClient);
 
 // User Endpoints
 app.post('/user', userCtrl.createUser);
-app.delete('/user/:id', userCtrl.deleteUser);
-app.get('/user/:name', userCtrl.getUser);
+app.delete('/user/:userid', userCtrl.deleteUser);
+app.get('/user/:username', userCtrl.getUser);
 app.get('/user', userCtrl.getAllUsers);
 //app.put('/user/:id', userCtrl.userClient);
 

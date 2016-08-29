@@ -15,6 +15,12 @@ module.exports = {
   //   });
   // },
 
+  getAllClients: function(res, req, next){
+    dbClient.get_all_clients(function (err, clients){
+        res.status(200).json(clients);
+    });
+  },
+
   createClient: function(res, req, next){
     dbClient.create_client([req.body.clientfirstname, req.body.clientlastname, req.body.clientaddress1, req.body.clientaddress2,
       req.body.clientcity, req.body.clientzipcode, req.body.clientnotes], function (err, job){
