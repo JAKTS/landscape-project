@@ -9,10 +9,21 @@
       <p>
         Current Jobs
       </p>
+        <div class="jobs" ng-repeat="item in jobs">
+          <ul>
+            <li>{{item.jobName}}</li>
+            <li>{{item.jobDueDate}}</li>
+          </ul>
 
+        </div>
+        <button type="button" name="deleteJob" ng-click="deleteJob(item.jobID)">Trash Can image</button>
     </div>
     <div class="addJobsButton">
-      <button type="button" name="AddJobs" ngclick="addJob(newJob)">+</button>
+    <section>
+      
+    </section>
+
+      <button type="button" name="addJob" ngclick="addJob()">Add Job</button>
 
     </div>
 
@@ -20,10 +31,13 @@
       <p>
         Current Clients
       </p>
-    </div>
-    <div class="addJobsButton">
-      <button type="button" name="AddJobs">+</button>
+      <div class="jobs" ng-repeat="item in client">
+        <ul>
+          <li>{{item.clientlastName}}</li>
+          <li>{{item.jobDueDate}}</li>
+        </ul>
 
+      </div>
     </div>
     <footer>
       <!-- <div class="completeJobs">

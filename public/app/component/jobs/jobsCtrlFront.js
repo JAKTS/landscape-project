@@ -1,4 +1,4 @@
-angular.module('davisLandscaping').controller('jobsCtrl', function($scope, jobsSrv){
+angular.module('davisLandscaping').controller('jobsCtrl', function($scope, jobsSrv, modals){
 
   $scope.getAllJobs = function(){
     jobsSrv.getAllJobs().then(function(response){
@@ -21,8 +21,14 @@ angular.module('davisLandscaping').controller('jobsCtrl', function($scope, jobsS
   $scope.getJob = function(jobName){
     jobSrv.getJob(jobName).then(function(response){
       $scope.job = response;
-    })
+    });
   }
+
+$scope.open = function(){
+  var please = modals.open(
+    
+  )
+}
 
 
 });
